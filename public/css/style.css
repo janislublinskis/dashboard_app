@@ -1,0 +1,203 @@
+body {
+    font-family: "Nunito";
+    margin: 0;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 95vh;
+}
+
+.absences,
+.planned-activities,
+.news-feed,
+.finance-report {
+    height: 50%;
+    min-width: 320px;
+    padding: 0.5rem;
+}
+
+.absences,
+.planned-activities {
+    width: 34%;
+    border-right: #c1daeb 0.1em solid;
+}
+
+.news-feed,
+.finance-report {
+    width: 66%;
+}
+
+.absences,
+.news-feed {
+    border-bottom: #c1daeb 0.1em solid;
+}
+
+/* Absences section */
+.absences-header {
+    height: 10%;
+    font-size: 110%;
+}
+
+.absences-events {
+    height: 90%;
+    font-size: 10px;
+}
+
+.absences-events-full {
+    height: 70%;
+}
+
+.absences-event-full {
+    display: flex;
+    border-left: #408ec2 1px solid;
+    height: auto;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.absence-smaller-font {
+    font-size: 80%;
+}
+
+.absences-event-time {
+    margin-right: 0.5rem;
+}
+
+.absences-events-short {
+    height: 30%;
+}
+
+.absences-event-short {
+    /* display: flex; */
+    border-left: #b55fc9 1px solid;
+    height: auto;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* News-feed section */
+
+.news-feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+
+.news-feed-header-forecast {
+    display: flex;
+    align-items: center;
+}
+
+.img-weather {
+    width: 30px;
+    height: 30px;
+}
+
+.news-feed-header-date {
+    font-size: 125%;
+}
+
+.news-feed-main {
+    width: 100%;
+    display: flex;
+}
+
+.twitter {
+    width: 50%;
+    margin-left: 0.5rem;
+    padding-right: 5rem;
+}
+
+.twitter-account {
+    margin-top: 1.25rem;
+}
+.twitter-account-date {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.twitter-account-post {
+    display: flex;
+    font-size: 75%;
+    line-height: 1;
+}
+
+.twitter-icon {
+    margin-right: 1rem;
+}
+
+.img-responsive {
+    width: 17.25px;
+    height: 14.25px;
+}
+
+/* Planned activities section */
+
+.planned-activities-header {
+    height:10%;
+    font-size: 110%;
+}
+
+.planned-activities-list {
+    height:80%;
+    font-size: 80%;
+    margin-left:.5rem;
+    padding-right: 5rem;
+}
+
+.planned-activity {
+    display:flex;
+    margin-top:.5rem;
+
+}
+
+.planned-activity-date {
+    margin-right:.5rem;
+}
+
+.occasions {
+    font-size:60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+/* Infinite footer loop animation */
+
+#outer {
+    overflow: hidden;
+    height: 5vh;
+    border-top: #828282 0.1em solid;
+    border-bottom: #828282 0.1em solid;
+}
+
+#outer div {
+    display: inline-block;
+    height: 100%;
+}
+
+#content {
+    height: 100%;
+    vertical-align: middle;
+}
+
+#loop {
+    white-space: nowrap;
+    animation: loop-anim 10s linear infinite;
+}
+
+@keyframes loop-anim {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -1%;
+        /* This works because of the div between "outer" and "loop" put back to -25 */
+    }
+}
