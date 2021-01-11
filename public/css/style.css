@@ -15,7 +15,7 @@ body {
 .finance-report {
     height: 50%;
     min-width: 320px;
-    padding: 0.5rem;
+    padding: 0.75rem;
 }
 
 .absences,
@@ -34,7 +34,9 @@ body {
     border-bottom: #c1daeb 0.1em solid;
 }
 
+
 /* Absences section */
+
 .absences-header {
     height: 10%;
     font-size: 110%;
@@ -42,7 +44,8 @@ body {
 
 .absences-events {
     height: 90%;
-    font-size: 10px;
+    font-size: 90%;
+    margin-left:.5rem;
 }
 
 .absences-events-full {
@@ -71,7 +74,6 @@ body {
 }
 
 .absences-event-short {
-    /* display: flex; */
     border-left: #b55fc9 1px solid;
     height: auto;
     padding-left: 0.5rem;
@@ -95,8 +97,9 @@ body {
 }
 
 .img-weather {
-    width: 30px;
-    height: 30px;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-right: .5rem;
 }
 
 .news-feed-header-date {
@@ -105,18 +108,20 @@ body {
 
 .news-feed-main {
     width: 100%;
+    height: 90%;
     display: flex;
 }
 
-.twitter {
+.news-feed-main-twitter {
     width: 50%;
     margin-left: 0.5rem;
-    padding-right: 5rem;
+    padding-right: 4rem;
 }
 
 .twitter-account {
     margin-top: 1.25rem;
 }
+
 .twitter-account-date {
     font-weight: bold;
     margin-bottom: 0.5rem;
@@ -133,40 +138,122 @@ body {
 }
 
 .img-responsive {
-    width: 17.25px;
-    height: 14.25px;
+    width: 1.725vw;
+    height: 1.425vw;
 }
+
+.news-feed-main-news {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-post-container {
+    border: #1a202c .1vw solid;
+    width: 47%;
+}
+
+.img-news-cover {
+    width: 100%;
+    height: auto;
+}
+
+.news-post-short {
+    height: 90%;
+}
+
+.news-post {
+    width: 100%;
+    height: 40%;
+    font-size: 85%;
+    padding: .5rem;
+}
+
+.news-post-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: .3rem;
+}
+
+.img-news-author {
+    width: 3vw;
+    height: 3vw;
+    margin-right: .5rem;
+}
+
+.news-post-content {
+    line-height: 1.2;
+    width: 100%;
+    -ms-overflow-y: hidden;
+    overflow-y: hidden;
+}
+
+.news-post-content-short {
+    height: 50%;
+}
+
+.news-post-content-full {
+    height: 100%;
+}
+
 
 /* Planned activities section */
 
 .planned-activities-header {
-    height:10%;
+    height: 10%;
     font-size: 110%;
 }
 
 .planned-activities-list {
-    height:80%;
-    font-size: 80%;
-    margin-left:.5rem;
+    height: 77%;
+    margin-left: 1rem;
     padding-right: 5rem;
 }
 
 .planned-activity {
-    display:flex;
-    margin-top:.5rem;
-
+    display: flex;
+    margin-top: .75rem;
+    font-size: 100%;
 }
 
 .planned-activity-date {
-    margin-right:.5rem;
+    margin-right: .5rem;
 }
 
 .occasions {
-    font-size:60%;
+    font-size: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
+
+
+/* Finance report section */
+
+.finance-report-header {
+    font-size: 110%;
+}
+
+.finance-report-data {
+    display: flex;
+}
+
+.chart-groups {
+    display: flex;
+    align-items: center;
+}
+
+.img-arrow {
+    width: 3vw;
+    height: 3vw;
+}
+
+.img-arrow-flipped {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 /* Infinite footer loop animation */
 
 #outer {
@@ -174,11 +261,12 @@ body {
     height: 5vh;
     border-top: #828282 0.1em solid;
     border-bottom: #828282 0.1em solid;
+    display : flex;
+    align-items : center;
 }
 
 #outer div {
     display: inline-block;
-    height: 100%;
 }
 
 #content {
@@ -197,7 +285,7 @@ body {
     }
 
     100% {
-        margin-left: -1%;
-        /* This works because of the div between "outer" and "loop" put back to -25 */
+        margin-left: -22%;
+        /* This works because of the div between "outer" and "loop" */
     }
 }
