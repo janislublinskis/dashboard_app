@@ -82,7 +82,7 @@ body {
 }
 
 
-/* News-feed section */
+/* News-partials section */
 
 .news-feed-header {
     display: flex;
@@ -157,6 +157,7 @@ body {
 .img-news-cover {
     width: 100%;
     height: auto;
+    /*max-height: 18vh;*/
 }
 
 .news-post-short {
@@ -165,38 +166,31 @@ body {
 
 .news-post {
     width: 100%;
-    height: 40%;
+    height: 50%;
     font-size: 85%;
     padding: .5rem;
-}
-
-.news-post-author {
-    display: flex;
-    align-items: center;
-    margin-bottom: .3rem;
-}
-
-.img-news-author {
-    width: 3vw;
-    height: 3vw;
-    margin-right: .5rem;
-}
-
-.news-post-content {
-    line-height: 1.2;
-    width: 100%;
+    position: relative;
     -ms-overflow-y: hidden;
     overflow-y: hidden;
 }
 
-.news-post-content-short {
-    height: 50%;
+.news-post-header {
+    margin-bottom: .3rem;
 }
 
-.news-post-content-full {
-    height: 100%;
+.news-post-title {
+    line-height: 1.1;
+    font-weight: bold;
 }
 
+.news-post-date {
+    margin-left: .4rem;
+}
+
+.news-post-content {
+    line-height: 1;
+    width: 100%;
+}
 
 /* Planned activities section */
 

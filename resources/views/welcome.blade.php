@@ -85,14 +85,12 @@
     <div class="news-feed">
         <div class="news-feed-header">
             <div class="news-feed-header-forecast">
-                <div class="forecast-icon">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Emoji_u2600.svg/1200px-Emoji_u2600.png"
-                        alt="Weather icon" class="img-weather"/>
+                <div class="forecast-details">
+                    <img src="{{ $weatherIcon }}">
+                    {{ $weatherForecast }}
                 </div>
-                <div class="forecast-details">19°C, 6 m/s</div>
             </div>
-            <div class="news-feed-header-date">Ceturtdiena, 07.01.2021</div>
+            <div class="news-feed-header-date">{{ $date }}</div>
         </div>
         <div class="news-feed-main">
             <div class="news-feed-main-twitter">
@@ -141,42 +139,22 @@
                 </div>
             </div>
             <div class="news-feed-main-news">
-                <div class="news-post-container news-post-short">
-                    <div class="news-cover">
-                        <img src="{{ asset('images/short_post.png') }}" alt="News cover image" class="img-news-cover"/>
-                    </div>
-                    <div class="news-post">
-                        <div class="news-post-author">
-                            <img src="{{ asset('images/short_post.png') }}" alt="News post author image" class="img-news-author"/>
-                            <div class="news-post-author-details">
-                                <div class="news-post-author-name">SIA Pēteris</div>
-                                <div class="news-post-date">05.08.2020</div>
+                @foreach($posts as $key => $post)
+                    <div class="news-post-container news-post-{{ $classTags[$key] }}">
+                        <div class="news-cover">
+                            <img src="{{ $posts[$key]['imageUrl'] }}" alt="News cover image" class="img-news-cover"/>
+                        </div>
+                        <div class="news-post">
+                            <div class="news-post-header">
+                                <div class="news-post-title">{{ $posts[$key]['title'] }}</div>
+                                <div class="news-post-date">{{ $posts[$key]['date'] }}</div>
+                            </div>
+                            <div class="news-post-content news-post-container-{{ $classTags[$key] }}">
+                                {{ $posts[$key]['content'] }}
                             </div>
                         </div>
-                        <div class="news-post-content news-post-content-short">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
                     </div>
-                </div>
-                <div class="news-post-container news-post-full">
-                    <div class="news-cover">
-                        <img src="{{ asset('images/full_post.png') }}" alt="News cover image" class="img-news-cover"/>
-                    </div>
-                    <div class="news-post">
-                        <div class="news-post-author">
-                            <img src="{{ asset('images/full_post.png') }}" alt="News post author image" class="img-news-author"/>
-                            <div class="news-post-author-details">
-                                <div class="news-post-author-name">SIA Pēteris</div>
-                                <div class="news-post-date">05.08.2020</div>
-                            </div>
-                        </div>
-                        <div class="news-post-content news-post-content-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -208,7 +186,7 @@
             </div>
         </div>
         <div class="occasions">
-            <div class="names-day">Vārda dienas svin: Digmārs, Juliāns, Rota, Zigmārs</div>
+            <div class="names-day">{{ $namesDay }}</div>
             <div class="birthday-day">Dzimšanas dienas svin: Jānis Bērziņš</div>
         </div>
     </div>
