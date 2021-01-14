@@ -1,0 +1,35 @@
+/* Infinite footer loop animation */
+
+#outer {
+    overflow: hidden;
+    height: 5vh;
+    border-top: #828282 0.1em solid;
+    border-bottom: #828282 0.1em solid;
+    display: flex;
+    align-items: center;
+}
+
+#outer div {
+    display: inline-block;
+}
+
+#content {
+    height: 100%;
+    vertical-align: middle;
+}
+
+#loop {
+    white-space: nowrap;
+    animation: loop-anim 10s linear infinite;
+}
+
+@keyframes loop-anim {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: -22%;
+        /* This works because of the div between "outer" and "loop" */
+    }
+}

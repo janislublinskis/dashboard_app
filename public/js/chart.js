@@ -13,17 +13,17 @@ var chart = new Chart(document.getElementById("chart-groups"), {
             ['Finanšu', 'prakses grupa', '8']
         ],
         datasets: [{
-            maxBarThickness: 40,
+            maxBarThickness: 37,
             label: 'Depreciation of the vehicle',
             data: [20, 50, 100, 70, 100, 50, 30, 70],
             backgroundColor: '#2196f3'
         }, {
-            maxBarThickness: 40,
+            maxBarThickness: 37,
             label: 'Fuel',
             data: [5, 20, 0, 20, 0, 15, 10, 5],
             backgroundColor: '#90caf9'
         }, {
-            maxBarThickness: 40,
+            maxBarThickness: 37,
             label: 'Insurance and Breakdown cover',
             data: [75, 30, 0, 10, 0, 35, 60, 25],
             backgroundColor: '#f2c9fb'
@@ -69,17 +69,17 @@ var chart = new Chart(document.getElementById("chart-total"), {
             ['Kopā'],
         ],
         datasets: [{
-            maxBarThickness: 40,
+            maxBarThickness: 37,
             label: 'Depreciation of the vehicle',
             data: [55],
             backgroundColor: '#0068ae'
         }, {
-            maxBarThickness: 40,
+            maxBarThickness: 37,
             label: 'Fuel',
             data: [15],
             backgroundColor: '#2196f3'
         }, {
-            maxBarThickness: 40,
+            maxBarThickness: 37,
             label: 'Insurance and Breakdown cover',
             data: [30],
             backgroundColor: '#e692f8'

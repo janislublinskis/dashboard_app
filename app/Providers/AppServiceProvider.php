@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Repository\PlannedActivities\PlannedActivitiesContract;
+use App\Repository\PlannedActivities\PlannedActivitiesRepository;
 use App\Services\Html\Parsing\ParsedHtmlContract;
 use App\Services\Html\Parsing\ParsedHtmlProvider;
 use App\Services\Html\Scraping\ScrappedHtmlContract;
@@ -19,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(ParsedHtmlContract::class, ParsedHtmlProvider::class);
         $this->app->bind(ScrappedHtmlContract::class, ScrappedHtmlProvider::class);
+        $this->app->bind(PlannedActivitiesContract::class, PlannedActivitiesRepository::class);
     }
 
     /**

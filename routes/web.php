@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ParseHtmlController;
+use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ParseHtmlController::class, 'index'])
+Route::get('/', [HomePageController::class, 'index'])
     ->name('welcome');
