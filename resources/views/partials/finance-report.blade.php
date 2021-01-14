@@ -4,12 +4,12 @@
         <div class="finance-report-charts">
             <img src="{{ asset('images/Left-Arrow-PNG-Download-Image.png') }}" alt="Arrow Left" class="img-arrow" />
             <div class="chart-group">
-                <canvas id="chart-groups" width="500" height="320"></canvas>
+                <canvas id="chart-groups" width="500" height="275"></canvas>
             </div>
             <img src="{{ asset('images/Left-Arrow-PNG-Download-Image.png') }}" alt="Arrow Right" class="img-arrow img-arrow-flipped" />
         </div>
         <div class="chart-total">
-            <canvas id="chart-total" width="48" height="290"></canvas>
+            <canvas id="chart-total" width="48" height="245"></canvas>
         </div>
     </div>
 </div>
