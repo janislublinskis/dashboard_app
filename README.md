@@ -1,4 +1,4 @@
-# Affiliate Links App
+# Dashboard App
 
 ## Project setup:
 
